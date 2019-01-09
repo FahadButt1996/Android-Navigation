@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity()  {
         navHost = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
 
         NavigationUI.setupWithNavController(bottomNavigationView , navHost.navController)
-        NavigationUI.setupActionBarWithNavController(this@MainActivity , navHost.navController)
+        NavigationUI.setupWithNavController(main_toolbar , navHost.navController)
     }
 
 
