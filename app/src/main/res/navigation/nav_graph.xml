@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ic_video_lecture">
+
+    <fragment
+        android:id="@+id/ic_video_lecture"
+        android:name="com.example.fahadwaqar.navigationjetpack.VideosFragment"
+        android:label="fragment_videos"
+        tools:layout="@layout/fragment_videos" >
+
+        <action
+            android:id="@+id/action_ic_video_lecture_to_ic_mcq"
+            app:destination="@id/ic_mcq" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ic_mcq"
+        android:name="com.example.fahadwaqar.navigationjetpack.MCQFragment"
+        android:label="fragment_mcq"
+        tools:layout="@layout/fragment_mcq" >
+
+        <action
+            android:id="@+id/action_ic_mcq_to_ic_past_paper"
+            app:destination="@id/ic_past_paper" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ic_past_paper"
+        android:name="com.example.fahadwaqar.navigationjetpack.PapersFragment"
+        android:label="fragment_papers"
+        tools:layout="@layout/fragment_papers" >
+
+        <argument
+            android:name="name_arg"
+            android:defaultValue="You come from bottom bar"
+            app:argType="string" />
+    </fragment>
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.fahadwaqar.navigationjetpack.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <argument
+        android:name="prev_frag_name"
+        android:defaultValue="tessting"
+        app:argType="string" />
+
+</navigation>

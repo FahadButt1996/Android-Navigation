@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/ic_video_lecture"
+        android:enabled="true"
+        android:icon="@drawable/ic_videos"
+        android:title="Videos"
+        app:showAsAction="always|withText"/>
+
+    <item
+        android:id="@+id/ic_mcq"
+        android:enabled="true"
+        android:icon="@drawable/ic_mcqs"
+        android:title="MCQ's"
+        app:showAsAction="always|withText" />
+
+    <item
+        android:id="@+id/ic_past_paper"
+        android:enabled="true"
+        android:icon="@drawable/ic_past"
+        android:title="Papers"
+        app:showAsAction="always|withText" />
+</menu>
