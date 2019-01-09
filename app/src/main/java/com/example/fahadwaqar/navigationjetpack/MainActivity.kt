@@ -22,8 +22,6 @@ class MainActivity : AppCompatActivity()  {
 
         navHost = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
 
-//        bottomNavigationView.menu.getItem(0).setCheckable(false)
-
         NavigationUI.setupWithNavController(bottomNavigationView , navHost.navController)
         NavigationUI.setupActionBarWithNavController(this@MainActivity , navHost.navController)
     }
@@ -32,7 +30,5 @@ class MainActivity : AppCompatActivity()  {
     // this function will help you to navigate back from action bar
     override fun onSupportNavigateUp(): Boolean {
         return navHost.navController.navigateUp() || super.onSupportNavigateUp()
-        //return NavigationUI.navigateUp(drawer, navHost.navController) || super.onSupportNavigateUp()
     }
-
 }
