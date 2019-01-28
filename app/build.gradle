@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'androidx.navigation.safeargs'
 
 android {
     compileSdkVersion 28
@@ -29,7 +30,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    def nav_version = "1.0.0-alpha09"
+    def nav_version = "1.0.0-alpha11"
 
     implementation "android.arch.navigation:navigation-fragment-ktx:$nav_version"
     // use -ktx for Kotlin

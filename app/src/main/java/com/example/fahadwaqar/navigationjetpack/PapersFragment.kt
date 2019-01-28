@@ -8,16 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_papers.*
 
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- *
- */
 class PapersFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -28,6 +18,11 @@ class PapersFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        name_feild.text = "Name Coming from MCQ Fragment is ::\n\n" + arguments?.getString("name_arg")
+    // when receiving data from bundle
+//        name_feild.text = "Name Coming from MCQ Fragment is ::\n\n" + arguments?.getString("name_arg")
+
+        // when receiving data from SafeArgs
+        val name_arg = PapersFragmentArgs.fromBundle(arguments!!).nameArg
+        name_feild.text = "Name Coming from MCQ Fragment is ::\n\n" + name_arg
     }
 }

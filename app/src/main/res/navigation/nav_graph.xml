@@ -35,7 +35,7 @@
 
         <argument
             android:name="name_arg"
-            android:defaultValue="You come from bottom bar"
+            android:defaultValue="Default Name"
             app:argType="string" />
     </fragment>
 
@@ -46,7 +46,7 @@
         tools:layout="@layout/activity_main" />
     <argument
         android:name="prev_frag_name"
-        android:defaultValue="tessting"
+        android:defaultValue="testing"
         app:argType="string" />
 
 </navigation>
